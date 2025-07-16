@@ -48,7 +48,7 @@ cd login-email-notifier
 Open `login-notify.sh` with a text editor and change the `RECIPIENT_EMAIL` variable to the address where you want to receive alerts.
 
 ```bash
-# ... inside login-notify.sh
+nano login-notify.sh
 
 # Set the email address to receive the notifications.
 RECIPIENT_EMAIL="your-email@example.com"
@@ -58,14 +58,16 @@ RECIPIENT_EMAIL="your-email@example.com"
 
 Move the script to a standard location for system binaries and set the correct ownership and permissions.
 
+1.  Move the script to /usr/local/sbin
 ```bash
-# Move the script to /usr/local/sbin
 sudo mv login-notify.sh /usr/local/sbin/
-
-# Set root as the owner
+```
+2.  Set root as the owner
+```bash
 sudo chown root:root /usr/local/sbin/login-notify.sh
-
-# Set permissions so only root can read, write, and execute
+```
+3.  Set permissions so only root can read, write, and execute
+```bash
 sudo chmod 700 /usr/local/sbin/login-notify.sh
 ```
 
